@@ -1,45 +1,48 @@
-#dio {
+
+body {
+  background-image: url(background.png);
+}
+  #dio {
   -webkit-animation: rotation 5s infinite linear;
-    width : 500px;
-    height : 500px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    right : 10px;
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  right: 10px;
+}
+#button {
+  -webkit-animation: rotation 5s infinite linear;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#counter {
+  position: relative;
+  top: 0em;
+  left: 0em;
+  font-size: xx-large;
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
   }
-  #button {
-    -webkit-animation: rotation 5s infinite linear;
-    width : 200px;
-    height : 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  to {
+    -webkit-transform: rotate(359deg);
   }
-  #counter{
-    position: relative;
-    top : 0em;
-    left: 0em;
-    font-size: xx-large;
-    
-  }
-  @-webkit-keyframes rotation {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to{
-      -webkit-transform: rotate(359deg);
-    }
-  }
-  .sideNav {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+}
+.sideNav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 mat-sidenav {
-  width : 45vh;
-  height : 1000vh;
+  width: 45vh;
+  height: 1000vh;
 }
 .sidebar {
   position: fixed;
@@ -58,51 +61,63 @@ mat-sidenav {
 }
 .nav ul {
   list-style: none;
-  
+
   li {
     position: relative;
     margin: 2em 0;
     &.active a {
       color: white;
     }
-    
+
     &:not(.active)::after {
       opacity: 0.2;
     }
-    
+
     &:not(.active):hover a {
-      color: rgba(#FFF, 0.75);
+      color: rgba(#fff, 0.75);
     }
-    
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 0.2em;
       background: black;
       left: 0;
       bottom: 0;
-      background-image: linear-gradient(to right, #5e42a6, #b74e91)
+      background-image: linear-gradient(to right, #5e42a6, #b74e91);
     }
   }
 }
-a{
+.nav a {
   line-height: 5em;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.4em;
-  color: rgba(#FFF, 0.35);
+  color: rgba(#fff, 0.35);
   display: block;
   transition: all ease-out 300ms;
 }
 
-
-#test{
-  
+#test {
 }
 
-.mat-toolbar{
-
-  position  : absolute;
-  top:690px;
+.mat-toolbar {
+  position: absolute;
+  top: 690px;
+}
+.mat-toolbar a:hover{
+  color: purple;
+}
+.mat-toolbar a{
+  text-decoration: none;
+}
+.spacer{
+  flex : 1;
+}
+#devName{
+  text-decoration: none;
+}
+#devName :hover{
+  color : purple;
 }
